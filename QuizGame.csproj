@@ -23,7 +23,7 @@
         <ApplicationTitle>QuizGame</ApplicationTitle>
 
         <!-- App Identifier -->
-        <ApplicationId>com.companyname.quizgame</ApplicationId>
+        <ApplicationId>space.kodirex.quizgame</ApplicationId>
         <ApplicationIdGuid>5FD9B925-C55E-4E48-98EE-540E0F0C4D48</ApplicationIdGuid>
 
         <!-- Versions -->
@@ -48,7 +48,6 @@
         <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" BaseSize="128,128"/>
         <!-- Images -->
         <MauiImage Include="Resources\Images\*"/>
-        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208"/>
         <!-- Custom Fonts -->
         <MauiFont Include="Resources\Fonts\*"/>
         <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
@@ -60,8 +59,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.*" Condition="'$(Configuration)' == 'Debug'"/>
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)"/>
+        <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
     </ItemGroup>
 </Project>

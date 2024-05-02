@@ -4,6 +4,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizGame.Views.AdvancedQuiz">
     <ContentPage.Content>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="QuestionLabel" Text="Test Text"></Label>
+            <Image x:Name="QuestionImage" Grid.Row="1" Source="score1">
+                <Image.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Left" Swiped="Image_OnSwiped_Left"></SwipeGestureRecognizer>
+                    <SwipeGestureRecognizer Direction="Right" Swiped="Image_OnSwiped_Right"></SwipeGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

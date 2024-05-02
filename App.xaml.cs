@@ -1,17 +1,16 @@
-﻿namespace QuizGame
-{
-    public partial class App : Application
-    {
-        public App()
-        {
+﻿namespace QuizGame {
+    public partial class App : Application {
+        public App(QuestionRepository repository) {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            QuestionRepo = repository;
+            MainPage = new NavigationPage(new MainPage());
             UserAppTheme = PlatformAppTheme;
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
+        public static QuestionRepository QuestionRepo { get; set; }
+
+        protected override Window CreateWindow(IActivationState? activationState) {
             var window = base.CreateWindow(activationState);
             window.Title = "QuizGame";
             return window;

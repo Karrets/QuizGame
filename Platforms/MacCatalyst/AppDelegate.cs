@@ -1,10 +1,8 @@
 ﻿using Foundation;
 
-namespace QuizGame
-{
+namespace QuizGame {
     [Register(nameof(AppDelegate))]
-    public class AppDelegate : MauiUIApplicationDelegate
-    {
+    public class AppDelegate : MauiUIApplicationDelegate {
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
 }
